@@ -2,7 +2,7 @@
 
 VS Code integration for Coder - a first local-based AI coding assistant.
 
-![screenshot](https://raw.githubusercontent.com/mochiyaki/gguf-coder/master/demo.gif)
+![screenshot](https://raw.githubusercontent.com/mochiyaki/gguf-coder/master/center.gif)
 
 ## Features
 
@@ -44,6 +44,8 @@ coder --vscode --vscode-port 51811
    - Proposed changes on the right
    - Syntax highlighting for the file type
 4. **Approve/reject in CLI**: Use the Coder CLI to approve or reject changes
+
+![screenshot](https://raw.githubusercontent.com/mochiyaki/gguf-coder/master/demo.gif)
 
 ### Commands
 
