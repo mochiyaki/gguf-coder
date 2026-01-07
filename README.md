@@ -29,12 +29,6 @@ Run Coder with the `--vscode` flag to enable the WebSocket server:
 coder --vscode
 ```
 
-Or with a custom port:
-
-```bash
-coder --vscode --vscode-port 51811
-```
-
 ### How It Works
 
 1. **Extension connects**: Click `Coder` from status bar then `Start CLI` to connect VS Code extension to CLI
