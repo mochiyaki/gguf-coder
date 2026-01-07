@@ -2,6 +2,8 @@
 
 VS Code integration for Coder - a first local-based AI coding assistant.
 
+![screenshot](https://raw.githubusercontent.com/mochiyaki/gguf-coder/master/demo.gif)
+
 ## Features
 
 - **Live Diff Preview**: See proposed file changes in VS Code's diff viewer before approving them in the CLI
