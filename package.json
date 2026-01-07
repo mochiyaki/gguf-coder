@@ -2,7 +2,7 @@
 	"name": "gguf-coder",
 	"displayName": "gguf coder",
 	"description": "VS Code integration for Coder",
-	"version": "0.0.8",
+	"version": "0.1.0",
 	"publisher": "gguf",
 	"author": {
 		"name": "gguf",

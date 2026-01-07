@@ -20,11 +20,10 @@ export function activate(context: vscode.ExtensionContext) {
 	outputChannel = vscode.window.createOutputChannel('Coder');
 	outputChannel.appendLine('Coder extension activating...');
 
-	// Initialize components
 	wsClient = new WebSocketClient(outputChannel);
 	diffManager = new DiffManager(context);
 
-	// Create status bar item
+	// Create status bar
 	statusBarItem = vscode.window.createStatusBarItem(
 		vscode.StatusBarAlignment.Right,
 		100,
@@ -123,7 +122,7 @@ function updateStatusBar(connected: boolean, text?: string): void {
 	}
 }
 
-// Message handling
+// Message handler
 function handleServerMessage(message: ServerMessage): void {
 	switch (message.type) {
 		case 'file_change':
@@ -221,7 +220,6 @@ function startCli(): void {
 	const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
 	const cwd = workspaceFolder?.uri.fsPath || process.cwd();
 
-	// Create terminal and run coder
 	const terminal = vscode.window.createTerminal({
 		name: 'Coder',
 		cwd,
@@ -230,21 +228,17 @@ function startCli(): void {
 	terminal.sendText('coder --vscode');
 	terminal.show();
 
-	// Try to connect after a delay
 	setTimeout(() => connect(), 3000);
 }
 
-// Send workspace context to CLI
 function sendWorkspaceContext(): void {
 	const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
 	const activeEditor = vscode.window.activeTextEditor;
 
-	// Get open files
 	const openFiles = vscode.workspace.textDocuments
 		.filter(doc => doc.uri.scheme === 'file')
 		.map(doc => doc.uri.fsPath);
 
-	// Get diagnostics for open files
 	const diagnostics: DiagnosticInfo[] = [];
 	for (const filePath of openFiles) {
 		const uri = vscode.Uri.file(filePath);
@@ -261,7 +255,6 @@ function sendWorkspaceContext(): void {
 	});
 }
 
-// Send selected code to Coder CLI with a specific action
 function sendCodeToCoder(action: 'ask' | 'explain' | 'refactor'): void {
 	const editor = vscode.window.activeTextEditor;
 	if (!editor) {
@@ -298,11 +291,9 @@ function sendCodeToCoder(action: 'ask' | 'explain' | 'refactor'): void {
 	const startLine = selection.start.line + 1;
 	const endLine = selection.end.line + 1;
 
-	// Build prompt based on action
 	let prompt: string;
 	switch (action) {
 		case 'ask':
-			// For 'ask', prompt the user for their question
 			vscode.window
 				.showInputBox({
 					prompt: 'What would you like to ask about this code?',
@@ -333,7 +324,6 @@ function sendCodeToCoder(action: 'ask' | 'explain' | 'refactor'): void {
 	sendPromptWithContext(prompt, filePath, selectedText, selection);
 }
 
-// Helper to send prompt with context
 function sendPromptWithContext(
 	prompt: string,
 	filePath: string,

@@ -5,6 +5,10 @@ All notable changes to the "coder" extension will be documented in this file.
 ## Releases
 
 - Initial release (sort by latest)
+- 0.1.0
+  - enable live diff preview for file changes
+- 0.0.9
+  - set default to normal mode
 - 0.0.8
   - add .vscodeignore
 - 0.0.7

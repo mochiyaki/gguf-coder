@@ -68,7 +68,6 @@ export class WebSocketClient {
 					resolve(false);
 				});
 
-				// Timeout for connection attempt
 				setTimeout(() => {
 					if (this.isConnecting) {
 						this.isConnecting = false;
