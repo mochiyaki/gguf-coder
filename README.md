@@ -27,19 +27,6 @@ Or with a custom port:
 coder --vscode --vscode-port 51811
 ```
 
-### Development
-
-```bash
-# Watch for changes
-npm run watch
-
-# Build for production
-npm run build
-
-# Package for distribution
-npm exec vsce package --allow-missing-repository --skip-license --no-dependencies
-```
-
 ### How It Works
 
 1. **Start the CLI**: Run `coder --vscode` in your project directory
@@ -156,6 +143,29 @@ The extension and CLI communicate via JSON messages over WebSocket:
 - This can happen when the CLI restarts
 - Click the status bar item to reconnect
 - Enable `coder.autoConnect` for automatic reconnection on startup
+
+### Development
+
+```bash
+# Watch for changes
+npm run watch
+
+# Build for production
+npm run build
+
+# Package for distribution
+npm exec vsce package --allow-missing-repository --skip-license --no-dependencies
+```
+
+The third command creates a `.vsix` file in the root directory that can be installed in VS Code.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Acknowledgments
+
+Will Lamerton, Nano Collective (MIT License), this extension works with [Nanocoder](https://github.com/nano-collective/nanocoder) as well (share the same port 51820), OpenCode (MIT License), gguf-connector (MIT License), etc., and thanks to all contributors for their hard work.
 
 ## License
 
