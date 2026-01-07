@@ -13,7 +13,7 @@ VS Code integration for Coder - a first local-based AI coding assistant.
 
 ## Requirements
 - Visual Studio Code version 1.104.0 or higher
-- Coder installed; if not, install it via npm:
+- [Coder](https://www.npmjs.com/package/@gguf/coder) installed; if not, install it via npm:
 
 ```bash
 npm install -g @gguf/coder
