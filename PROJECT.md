@@ -80,22 +80,6 @@ Configure the extension in VS Code settings (`Ctrl+,` / `Cmd+,`):
 | `coder.autoStartCli`    | `false`  | Automatically start Coder CLI if not running     |
 | `coder.showDiffPreview` | `true`  | Automatically show diff preview for file changes |
 
-## Project Structure
-
-```
-gguf-coder/
-├── src/
-│   ├── extension.ts         # Main extension entry point
-│   ├── websocket-client.ts  # WebSocket client implementation
-│   ├── diff-manager.ts      # Manages diff previews and file changes
-│   └── protocol.ts          # Message protocol definitions
-├── vscode-server.ts         # VS Code server for CLI communication
-├── protocol.ts              # Shared protocol definitions
-├── index.ts                 # Module exports
-├── package.json             # Extension metadata and dependencies
-└── README.md                # This file
-```
-
 ## Architecture
 
 ```

@@ -1,0 +1,17 @@
+# Change Log
+
+All notable changes to the "coder" extension will be documented in this file.
+
+## Releases
+
+- Initial release (sort by latest)
+- 0.0.5
+  - checkup statistics
+- 0.0.4
+  - refine naming scheme
+- 0.0.3
+  - change the port from 51810 to 51820
+- 0.0.2
+  - turn off auto-connect via launch
+- 0.0.1
+  - coder connector

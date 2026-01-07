@@ -1,0 +1,142 @@
+{
+	"name": "gguf-coder",
+	"displayName": "gguf coder",
+	"description": "VS Code integration for Coder",
+	"version": "0.0.6",
+	"publisher": "gguf",
+	"author": {
+		"name": "gguf",
+		"email": "info@gguf.us"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/mochiyaki/gguf-coder",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mochiyaki/gguf-coder.git"
+	},
+	"icon": "assets/images/icon.png",
+	"engines": {
+		"vscode": "^1.104.0"
+	},
+	"categories": [
+		"Machine Learning",
+		"Other"
+	],
+	"keywords": [
+		"ai",
+		"cli",
+		"code",
+		"coder",
+		"gguf"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "coder.connect",
+				"title": "Connect to Coder",
+				"category": "gguf-coder"
+			},
+			{
+				"command": "coder.disconnect",
+				"title": "Disconnect from Coder",
+				"category": "gguf-coder"
+			},
+			{
+				"command": "coder.startCli",
+				"title": "Start Coder CLI",
+				"category": "gguf-coder"
+			},
+			{
+				"command": "coder.askAboutCode",
+				"title": "Ask Coder about this",
+				"category": "gguf-coder"
+			},
+			{
+				"command": "coder.explainCode",
+				"title": "Explain this code",
+				"category": "gguf-coder"
+			},
+			{
+				"command": "coder.refactorCode",
+				"title": "Refactor this code",
+				"category": "gguf-coder"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"submenu": "coder.submenu",
+					"group": "gguf-coder"
+				}
+			],
+			"coder.submenu": [
+				{
+					"command": "coder.askAboutCode",
+					"when": "editorHasSelection"
+				},
+				{
+					"command": "coder.explainCode",
+					"when": "editorHasSelection"
+				},
+				{
+					"command": "coder.refactorCode",
+					"when": "editorHasSelection"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"id": "coder.submenu",
+				"label": "Coder"
+			}
+		],
+		"configuration": {
+			"title": "Coder",
+			"properties": {
+				"coder.serverPort": {
+					"type": "number",
+					"default": 51820,
+					"description": "WebSocket server port for communication with Coder CLI"
+				},
+				"coder.autoConnect": {
+					"type": "boolean",
+					"default": false,
+					"description": "Automatically connect to Coder CLI on startup"
+				},
+				"coder.autoStartCli": {
+					"type": "boolean",
+					"default": false,
+					"description": "Automatically start Coder CLI if not running"
+				},
+				"coder.showDiffPreview": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show diff preview before applying file changes"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"package": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+		"build": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --minify",
+		"watch": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --watch",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"@types/vscode": "^1.104.0",
+		"@types/ws": "^8.5.10",
+		"@vscode/vsce": "^3.7.0",
+		"esbuild": "^0.27.2",
+		"eslint": "^8.57.0",
+		"typescript": "^5.3.0"
+	},
+	"dependencies": {
+		"ws": "^8.16.0"
+	}
+}
