@@ -21,14 +21,6 @@ npm install -g @gguf/coder
 
 ## Usage
 
-### Starting Coder with VS Code Support
-
-Run Coder with the `--vscode` flag to enable the WebSocket server:
-
-```bash
-coder --vscode
-```
-
 ### How It Works
 
 1. **Extension connects**: Click `Coder` from status bar then `Start CLI` to connect VS Code extension to CLI
