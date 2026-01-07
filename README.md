@@ -175,7 +175,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgments
 
-Will Lamerton, Nano Collective (MIT License), this extension works with [Nanocoder](https://github.com/nano-collective/nanocoder) as well (share the same port 51820), OpenCode (MIT License), gguf-connector (MIT License), etc., and thanks to all contributors for their hard work.
+Will Lamerton, Nano Collective (MIT License), this extension works with [Nanocoder](https://github.com/nano-collective/nanocoder) as well (share the same port 51820), continue (Apache-2.0), OpenCode (MIT License), gguf-connector (MIT License), etc., and thanks to all contributors for their hard work.
 
 ## License
 
