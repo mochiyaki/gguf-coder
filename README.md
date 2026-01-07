@@ -183,8 +183,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Release Notes
 
-<<<<<<< HEAD
 See [CHANGELOG.md](CHANGELOG.md) for details on recent changes and updates.
-=======
-See [CHANGELOG.md](CHANGELOG.md) for details on recent changes and updates.
->>>>>>> a0b1490 (Auto‑generated commit)
