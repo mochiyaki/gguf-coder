@@ -159,8 +159,12 @@ The extension and CLI communicate via JSON messages over WebSocket:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Release Notes
 
+<<<<<<< HEAD
 See CHANGELOG for details on recent changes and updates.
+=======
+See [CHANGELOG.md](CHANGELOG.md) for details on recent changes and updates.
+>>>>>>> 20362cf (Publish changes to main)

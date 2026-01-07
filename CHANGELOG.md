@@ -5,6 +5,12 @@ All notable changes to the "coder" extension will be documented in this file.
 ## Releases
 
 - Initial release (sort by latest)
+- 0.0.8
+  - add .vscodeignore
+- 0.0.7
+  - revise docs and add demo
+- 0.0.6
+  - update project structure
 - 0.0.5
   - checkup statistics
 - 0.0.4
