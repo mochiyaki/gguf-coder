@@ -37,8 +37,8 @@ coder --vscode --vscode-port 51811
 
 ### How It Works
 
-1. **Start the CLI**: Run `coder --vscode` in your project directory
-2. **Extension connects**: Or click Coder then `Start CLI` to connect VS Code extension to CLI
+1. **Extension connects**: Click `Coder` from status bar then `Start CLI` to connect VS Code extension to CLI
+2. Or **Start the CLI**: Run `coder --vscode` in your project directory (optional)
 3. **View diffs**: When Coder proposes file changes, a diff view opens in VS Code showing:
    - Original content on the left
    - Proposed changes on the right
@@ -152,7 +152,7 @@ The extension and CLI communicate via JSON messages over WebSocket:
 
 - This can happen when the CLI restarts
 - Click the status bar item to reconnect
-- Enable `coder.autoConnect` for automatic reconnection on startup
+- Opt to enable `coder.autoConnect` for automatic reconnection on startup (default is manual)
 
 ### Development
 
@@ -175,7 +175,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgments
 
-Will Lamerton, Nano Collective (MIT License), this extension works with [nanocoder](https://github.com/nano-collective/nanocoder) as well (share the same port 51820), [continue](https://github.com/continuedev/continue) (Apache-2.0), [opencode](https://github.com/anomalyco/opencode) (MIT License), gguf-connector (MIT License), etc., and thanks to all contributors for their hard work.
+Special thanks Will Lamerton, Nano Collective (MIT License), this extension works with [nanocoder](https://github.com/nano-collective/nanocoder) as well (share the same port 51820); [continue](https://github.com/continuedev/continue) (Apache-2.0), [opencode](https://github.com/anomalyco/opencode) (MIT License), gguf-connector (MIT License), etc., and thanks to all contributors for their hard work.
 
 ## License
 
