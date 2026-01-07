@@ -11,6 +11,14 @@ VS Code integration for Coder - a first local-based AI coding assistant.
 - **Status Bar Integration**: Quick connection status and controls from the VS Code status bar
 - **Diagnostics Sharing**: VS Code's LSP diagnostics (errors, warnings) are shared with Coder for context
 
+## Requirements
+- Visual Studio Code version 1.104.0 or higher
+- Coder installed; if not, install it via npm:
+
+```bash
+npm install -g @gguf/coder
+```
+
 ## Usage
 
 ### Starting Coder with VS Code Support
