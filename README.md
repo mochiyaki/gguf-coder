@@ -24,7 +24,7 @@ npm install -g @gguf/coder
 ### Starting Coder with `monster` icon
 
 - Look for the green monster icon on the top right bar
-- Click it for openning CLI and connect to Coder at the same time
+- Click it for openning CLI and connect to Coder at the same time (status bar method, see below)
 
 ![screenshot](https://raw.githubusercontent.com/mochiyaki/gguf-coder/master/left.gif)
 
