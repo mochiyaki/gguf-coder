@@ -21,6 +21,13 @@ npm install -g @gguf/coder
 
 ## Usage
 
+### Starting Coder with `monster` icon
+
+- Look for the green monster icon on the top right bar
+- Click it for activate CLI and connect to Coder at the same time
+
+![screenshot](https://raw.githubusercontent.com/mochiyaki/gguf-coder/master/left.gif)
+
 ### How It Works
 
 1. **Extension connects**: Click `Coder` from status bar then `Start CLI` to connect VS Code extension to CLI
