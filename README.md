@@ -52,6 +52,7 @@ Access via Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`):
 | `gguf-coder: Ask Coder about this`  | Ask Coder about selected code                |
 | `gguf-coder: Explain this code`      | Get explanation of selected code             |
 | `gguf-coder: Refactor this code`     | Request refactoring of selected code         |
+| `gguf-coder: Open Coder Terminal`    | Open a terminal for Coder CLI                |
 
 ### Status Bar
 
