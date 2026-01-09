@@ -158,7 +158,7 @@ npm run watch
 npm run build
 
 # Package for distribution
-npm exec vsce package --allow-missing-repository --skip-license --no-dependencies
+npm exec vsce package
 ```
 
 The third command creates a `.vsix` file in the root directory that can be installed in VS Code.
